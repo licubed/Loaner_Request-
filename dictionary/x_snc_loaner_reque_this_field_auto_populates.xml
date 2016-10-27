@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element extends="task" label="Loaner Request " max_length="40" name="x_snc_loaner_reque_this_field_auto_populates" sizeclass="5" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="3" default="sc" label="Depot" max_length="40" name="u_depot" type="string">
+            <choice>
+                <element label="New York" sequence="0" value="NY"/>
+                <element label="London" sequence="1" value="london"/>
+                <element label="Buenos Aries" sequence="2" value="ba"/>
+                <element label="Santa Clara" sequence="3" value="sc"/>
+                <element label="Singapore" sequence="4" value="Singapore"/>
+                <element label="Sydney" sequence="5" value="Sydney"/>
+                <element label="Other" sequence="6" value="Other"/>
+            </choice>
+        </element>
+        <element label="End Date" mandatory="true" max_length="40" name="u_end_date" type="glide_date_time"/>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Item Type " max_length="40" name="u_item_type" type="string">
+            <choice>
+                <element label="Laptop" sequence="0" value="cmdb_ci_computer"/>
+                <element label="Mobile Phone" sequence="1" value="u_cmdb_ci_mobile_device"/>
+                <element label="Choice 3" sequence="2" value="u_cmdb_ci_projector"/>
+                <element label="-TBDVALUE-u_cmdb_ci_device" sequence="3"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" choice="1" label="Country Code" max_length="40" name="u_location_to_be_used" type="string">
+            <choice>
+                <element label="CNY" sequence="0" value="CNY"/>
+                <element label="USA" sequence="1" value="USA"/>
+                <element label="NZ" sequence="2" value="NZ"/>
+                <element label="MX" sequence="3" value="MX"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Other" max_length="40" name="u_other" type="string"/>
+        <element label="New Reference" mandatory="true" max_length="32" name="u_reference_for" reference="sys_user" type="reference"/>
+        <element label="Start Date" mandatory="true" max_length="40" name="u_started_date" type="glide_date_time"/>
+    </element>
+</database>
